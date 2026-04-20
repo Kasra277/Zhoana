@@ -1,0 +1,20 @@
+{
+  "_description": "Every image URL points to a 404. Tests mock sendPhoto to fail for these URLs; chain must advance to text fallback and the user must receive exactly ONE message.",
+  "item": {
+    "sku": "H2S-AMF-BROKEN-001",
+    "name": "Amersfoort studio (broken images)",
+    "url_key": "amersfoort-studio-broken-001",
+    "city": "Amersfoort",
+    "small_image": { "url": "https://img.holland2stay.com/404/small.jpg" },
+    "thumbnail": { "url": "https://img.holland2stay.com/404/thumb.jpg" },
+    "media_gallery": [
+      { "url": "https://img.holland2stay.com/404/g1.jpg", "position": 1, "disabled": false },
+      { "url": "https://img.holland2stay.com/404/g2.jpg", "position": 2, "disabled": false }
+    ],
+    "price_range": {
+      "minimum_price": {
+        "final_price": { "value": 1500.0, "currency": "EUR" }
+      }
+    }
+  }
+}

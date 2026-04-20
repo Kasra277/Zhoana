@@ -1,0 +1,20 @@
+{
+  "_description": "media_gallery exists but every entry is disabled. listing_image_candidates must skip the entire gallery and fall back to small_image.",
+  "item": {
+    "sku": "H2S-ENS-DIS-001",
+    "name": "Enschede townhouse (disabled gallery)",
+    "url_key": "enschede-townhouse-disabled-001",
+    "city": "Enschede",
+    "small_image": { "url": "https://img.holland2stay.com/small/ens.jpg", "label": "small" },
+    "thumbnail": { "url": "https://img.holland2stay.com/thumb/ens.jpg", "label": "thumb" },
+    "media_gallery": [
+      { "url": "https://img.holland2stay.com/gallery/ens1.jpg", "position": 1, "disabled": true },
+      { "url": "https://img.holland2stay.com/gallery/ens2.jpg", "position": 2, "disabled": true }
+    ],
+    "price_range": {
+      "minimum_price": {
+        "final_price": { "value": 950.0, "currency": "EUR" }
+      }
+    }
+  }
+}

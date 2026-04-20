@@ -1,0 +1,13 @@
+{
+  "_description": "No city field; url_key contains 'arnhem'. listing_city must infer Arnhem via the ALLOWED_CITIES token scan.",
+  "item": {
+    "sku": "H2S-ARN-INFER-001",
+    "name": "Studio near the station",
+    "url_key": "studio-arnhem-central-001",
+    "price_range": {
+      "minimum_price": {
+        "final_price": { "value": 1150.0, "currency": "EUR" }
+      }
+    }
+  }
+}

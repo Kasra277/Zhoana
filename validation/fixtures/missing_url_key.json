@@ -1,0 +1,22 @@
+{
+  "_description": "Listing with every field except url_key. listing_url must return the residences fallback URL and dispatch must emit a WARN.",
+  "item": {
+    "sku": "H2S-ARN-NOSLUG-001",
+    "name": "Arnhem room without slug",
+    "city": "Arnhem",
+    "bedrooms": 2,
+    "living_area": 48,
+    "available_from": "2026-06-15",
+    "short_description": { "html": "<p>Spacious two-bedroom near Arnhem Centraal.</p>" },
+    "small_image": { "url": "https://img.holland2stay.com/small/arn.jpg" },
+    "thumbnail": { "url": "https://img.holland2stay.com/thumb/arn.jpg" },
+    "media_gallery": [
+      { "url": "https://img.holland2stay.com/gallery/arn1.jpg", "position": 1, "disabled": false }
+    ],
+    "price_range": {
+      "minimum_price": {
+        "final_price": { "value": 1400.0, "currency": "EUR" }
+      }
+    }
+  }
+}

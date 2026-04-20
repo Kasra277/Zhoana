@@ -1,0 +1,71 @@
+{
+  "_description": "P-PERSIST-13 — field-loss impact matrix. Three listings to be injected in sequence (one per h2s cycle) after a staging redeploy. Used to verify the claims in plan §6.3: price-gate loss (R1) manifests, paused loss (R2) manifests, empty-cities default (R3) is failsafe.",
+  "_usage": "After the operator redeploys staging with a user whose prior state was cities=[Amersfoort], min=800, max=1500, paused=True — inject these listings and record user-visible alerts in validation/evidence/persistence/P-PERSIST-13/",
+  "_expected_behavior_post_redeploy": {
+    "p13_amf_1200_in_range": "ALERT DELIVERED — proves paused=True was lost (R2). Without loss the user would be silent.",
+    "p13_amf_3000_out_of_range": "ALERT DELIVERED — proves max_price was lost (R1). Without loss this listing would fall outside the 800–1500 gate.",
+    "p13_deventer_1200": "NO ALERT — proves cities=[] default is failsafe (R3). The user never configured Deventer."
+  },
+  "items": [
+    {
+      "_id": "p13_amf_1200_in_range",
+      "sku": "P13-AMF-001",
+      "name": "Studio Amersfoort (in prior range)",
+      "url_key": "p13-studio-amersfoort-001",
+      "city": "Amersfoort",
+      "bedrooms": 1,
+      "living_area": 30,
+      "price_range": {
+        "minimum_price": {
+          "final_price": { "value": 1200.0, "currency": "EUR" }
+        }
+      },
+      "short_description": {
+        "html": "<p>Test listing priced inside the prior 800-1500 range.</p>"
+      },
+      "media_gallery": [
+        { "url": "https://img.holland2stay.com/gallery/p13-a.jpg", "label": "hero", "position": 1, "disabled": false }
+      ]
+    },
+    {
+      "_id": "p13_amf_3000_out_of_range",
+      "sku": "P13-AMF-002",
+      "name": "Apartment Amersfoort (out of prior range)",
+      "url_key": "p13-apartment-amersfoort-002",
+      "city": "Amersfoort",
+      "bedrooms": 2,
+      "living_area": 65,
+      "price_range": {
+        "minimum_price": {
+          "final_price": { "value": 3000.0, "currency": "EUR" }
+        }
+      },
+      "short_description": {
+        "html": "<p>Test listing priced well above the prior 800-1500 range.</p>"
+      },
+      "media_gallery": [
+        { "url": "https://img.holland2stay.com/gallery/p13-b.jpg", "label": "hero", "position": 1, "disabled": false }
+      ]
+    },
+    {
+      "_id": "p13_deventer_1200",
+      "sku": "P13-DEV-001",
+      "name": "Studio Deventer (unsubscribed city)",
+      "url_key": "p13-studio-deventer-001",
+      "city": "Deventer",
+      "bedrooms": 1,
+      "living_area": 28,
+      "price_range": {
+        "minimum_price": {
+          "final_price": { "value": 1200.0, "currency": "EUR" }
+        }
+      },
+      "short_description": {
+        "html": "<p>Test listing in a city the user never selected.</p>"
+      },
+      "media_gallery": [
+        { "url": "https://img.holland2stay.com/gallery/p13-c.jpg", "label": "hero", "position": 1, "disabled": false }
+      ]
+    }
+  ]
+}

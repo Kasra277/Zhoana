@@ -1,0 +1,8 @@
+{
+  "_description": "Three listings — Amersfoort, Deventer, Nijmegen. User subscribed to {Amersfoort} only. V-CITY-08: exactly one alert delivered; the other two still enter seen_ids (no alert, no spam).",
+  "items": [
+    { "sku": "MC-AMF-001", "name": "Amersfoort one", "url_key": "mc-amersfoort-001", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/mc1.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1200.0, "currency": "EUR" } } } },
+    { "sku": "MC-DEV-001", "name": "Deventer one", "url_key": "mc-deventer-001", "city": "Deventer", "small_image": { "url": "https://img.example.com/mc2.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1000.0, "currency": "EUR" } } } },
+    { "sku": "MC-NIJ-001", "name": "Nijmegen one", "url_key": "mc-nijmegen-001", "city": "Nijmegen", "small_image": { "url": "https://img.example.com/mc3.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1100.0, "currency": "EUR" } } } }
+  ]
+}

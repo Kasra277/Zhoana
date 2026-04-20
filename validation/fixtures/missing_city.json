@@ -1,0 +1,14 @@
+{
+  "_description": "Listing with city=null and name/url_key containing no ALLOWED_CITY token. listing_city returns ''. dispatch emits 'could not resolve city' WARN and no alert is sent.",
+  "item": {
+    "sku": "H2S-UNKNOWN-001",
+    "name": "Unknown location studio",
+    "url_key": "unknown-location-studio",
+    "city": null,
+    "price_range": {
+      "minimum_price": {
+        "final_price": { "value": 900.0, "currency": "EUR" }
+      }
+    }
+  }
+}

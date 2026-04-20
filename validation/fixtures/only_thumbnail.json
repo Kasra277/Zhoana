@@ -1,0 +1,15 @@
+{
+  "_description": "No media_gallery, no small_image — only thumbnail. send_alert must try the thumbnail via sendPhoto.",
+  "item": {
+    "sku": "H2S-NIJ-THUMB-001",
+    "name": "Nijmegen studio (thumbnail only)",
+    "url_key": "nijmegen-studio-thumb-001",
+    "city": "Nijmegen",
+    "thumbnail": { "url": "https://img.holland2stay.com/thumb/nij.jpg", "label": "thumb" },
+    "price_range": {
+      "minimum_price": {
+        "final_price": { "value": 1100.0, "currency": "EUR" }
+      }
+    }
+  }
+}

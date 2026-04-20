@@ -1,0 +1,15 @@
+{
+  "_description": "No media_gallery, no thumbnail — only small_image. send_alert must use small_image.url.",
+  "item": {
+    "sku": "H2S-ZWO-SMALL-001",
+    "name": "Zwolle loft (small_image only)",
+    "url_key": "zwolle-loft-small-001",
+    "city": "Zwolle",
+    "small_image": { "url": "https://img.holland2stay.com/small/zwo.jpg", "label": "small" },
+    "price_range": {
+      "minimum_price": {
+        "final_price": { "value": 1350.0, "currency": "EUR" }
+      }
+    }
+  }
+}

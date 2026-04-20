@@ -1,0 +1,12 @@
+{
+  "_description": "Listing with no price_range. listing_price returns None; the price gate is skipped and the caption shows 'price on site'.",
+  "item": {
+    "sku": "H2S-DEV-NOPRICE-001",
+    "name": "Deventer apartment without price",
+    "url_key": "deventer-apartment-001",
+    "city": "Deventer",
+    "bedrooms": 1,
+    "short_description": { "html": "<p>Price available on request.</p>" },
+    "small_image": { "url": "https://img.holland2stay.com/small/dev.jpg" }
+  }
+}

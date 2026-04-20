@@ -1,0 +1,26 @@
+{
+  "_description": "Full rich listing with every optional field populated. Expected path: sendPhoto succeeds with media_gallery[0], caption includes facts row + description.",
+  "item": {
+    "sku": "H2S-AMF-A1-001",
+    "name": "Luxury studio Amersfoort A1",
+    "url_key": "luxury-studio-amersfoort-a1",
+    "city": "Amersfoort",
+    "bedrooms": 1,
+    "living_area": 32,
+    "available_from": "2026-05-01T00:00:00",
+    "short_description": {
+      "html": "<p>Modern fully-furnished studio in central <strong>Amersfoort</strong>. Includes utilities, Wi-Fi, and weekly cleaning service.</p>"
+    },
+    "small_image": { "url": "https://img.holland2stay.com/small/a1.jpg", "label": "small" },
+    "thumbnail": { "url": "https://img.holland2stay.com/thumb/a1.jpg", "label": "thumb" },
+    "media_gallery": [
+      { "url": "https://img.holland2stay.com/gallery/a1-hero.jpg", "label": "hero", "position": 1, "disabled": false },
+      { "url": "https://img.holland2stay.com/gallery/a1-kitchen.jpg", "label": "kitchen", "position": 2, "disabled": false }
+    ],
+    "price_range": {
+      "minimum_price": {
+        "final_price": { "value": 1250.0, "currency": "EUR" }
+      }
+    }
+  }
+}

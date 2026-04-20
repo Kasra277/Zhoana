@@ -1,0 +1,9 @@
+{
+  "_description": "Four listings in Amersfoort spanning below / inside / above a 500-1500 range, plus one with missing price. User with cities={Amersfoort}, min=500, max=1500 should receive only the inside + no-price listings (city-match + price-match OR city-match + price-missing).",
+  "items": [
+    { "sku": "PG-LOW-001",  "name": "Below range",    "url_key": "pg-low-001",  "city": "Amersfoort", "small_image": { "url": "https://img.example.com/pg1.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 300.0,  "currency": "EUR" } } } },
+    { "sku": "PG-IN-001",   "name": "Inside range",   "url_key": "pg-in-001",   "city": "Amersfoort", "small_image": { "url": "https://img.example.com/pg2.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1000.0, "currency": "EUR" } } } },
+    { "sku": "PG-HIGH-001", "name": "Above range",    "url_key": "pg-high-001", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/pg3.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1800.0, "currency": "EUR" } } } },
+    { "sku": "PG-NONE-001", "name": "Price missing",  "url_key": "pg-none-001", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/pg4.jpg" } }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "_description": "No image sources whatsoever. listing_image_candidates returns []; send_alert must go straight to text fallback #1 (sendMessage with preview on).",
+  "item": {
+    "sku": "H2S-ZUT-NOIMG-001",
+    "name": "Zutphen flat without images",
+    "url_key": "zutphen-flat-noimg-001",
+    "city": "Zutphen",
+    "price_range": {
+      "minimum_price": {
+        "final_price": { "value": 850.0, "currency": "EUR" }
+      }
+    }
+  }
+}

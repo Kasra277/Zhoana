@@ -1,0 +1,15 @@
+{
+  "_description": "10 listings where exactly 3 have url_key and 7 do not. V-LINK-06: the full cycle must produce exactly 3 per-listing URLs and 7 residences-fallback URLs, and each of the 7 fallbacks must have a matching WARN log line.",
+  "items": [
+    { "sku": "L-WITH-001", "name": "With slug 1", "url_key": "with-slug-amersfoort-1", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/l1.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1000.0, "currency": "EUR" } } } },
+    { "sku": "L-WITH-002", "name": "With slug 2", "url_key": "with-slug-amersfoort-2", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/l2.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1100.0, "currency": "EUR" } } } },
+    { "sku": "L-WITH-003", "name": "With slug 3", "url_key": "with-slug-amersfoort-3", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/l3.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1200.0, "currency": "EUR" } } } },
+    { "sku": "L-NONE-001", "name": "No slug 1", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/n1.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1050.0, "currency": "EUR" } } } },
+    { "sku": "L-NONE-002", "name": "No slug 2", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/n2.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1150.0, "currency": "EUR" } } } },
+    { "sku": "L-NONE-003", "name": "No slug 3", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/n3.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1250.0, "currency": "EUR" } } } },
+    { "sku": "L-NONE-004", "name": "No slug 4", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/n4.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1300.0, "currency": "EUR" } } } },
+    { "sku": "L-NONE-005", "name": "No slug 5", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/n5.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1350.0, "currency": "EUR" } } } },
+    { "sku": "L-NONE-006", "name": "No slug 6", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/n6.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1400.0, "currency": "EUR" } } } },
+    { "sku": "L-NONE-007", "name": "No slug 7", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/n7.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1450.0, "currency": "EUR" } } } }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "_description": "GraphQL returned city in lowercase. listing_city must pass the case-insensitive match and dispatch must deliver to a user subscribed to Amersfoort.",
+  "item": {
+    "sku": "H2S-AMF-LOWER-001",
+    "name": "amersfoort lowercase city",
+    "url_key": "amersfoort-lowercase-001",
+    "city": "amersfoort",
+    "price_range": {
+      "minimum_price": {
+        "final_price": { "value": 1000.0, "currency": "EUR" }
+      }
+    }
+  }
+}

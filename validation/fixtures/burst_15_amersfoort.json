@@ -1,0 +1,20 @@
+{
+  "_description": "15 matching listings for Amersfoort. With MAX_ALERTS_PER_CYCLE=10 the user receives 9 full alerts + 1 summary covering 6 more.",
+  "items": [
+    { "sku": "B-001", "name": "Burst 01", "url_key": "burst-amersfoort-001", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/01.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1000.0, "currency": "EUR" } } } },
+    { "sku": "B-002", "name": "Burst 02", "url_key": "burst-amersfoort-002", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/02.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1010.0, "currency": "EUR" } } } },
+    { "sku": "B-003", "name": "Burst 03", "url_key": "burst-amersfoort-003", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/03.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1020.0, "currency": "EUR" } } } },
+    { "sku": "B-004", "name": "Burst 04", "url_key": "burst-amersfoort-004", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/04.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1030.0, "currency": "EUR" } } } },
+    { "sku": "B-005", "name": "Burst 05", "url_key": "burst-amersfoort-005", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/05.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1040.0, "currency": "EUR" } } } },
+    { "sku": "B-006", "name": "Burst 06", "url_key": "burst-amersfoort-006", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/06.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1050.0, "currency": "EUR" } } } },
+    { "sku": "B-007", "name": "Burst 07", "url_key": "burst-amersfoort-007", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/07.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1060.0, "currency": "EUR" } } } },
+    { "sku": "B-008", "name": "Burst 08", "url_key": "burst-amersfoort-008", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/08.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1070.0, "currency": "EUR" } } } },
+    { "sku": "B-009", "name": "Burst 09", "url_key": "burst-amersfoort-009", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/09.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1080.0, "currency": "EUR" } } } },
+    { "sku": "B-010", "name": "Burst 10", "url_key": "burst-amersfoort-010", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/10.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1090.0, "currency": "EUR" } } } },
+    { "sku": "B-011", "name": "Burst 11", "url_key": "burst-amersfoort-011", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/11.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1100.0, "currency": "EUR" } } } },
+    { "sku": "B-012", "name": "Burst 12", "url_key": "burst-amersfoort-012", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/12.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1110.0, "currency": "EUR" } } } },
+    { "sku": "B-013", "name": "Burst 13", "url_key": "burst-amersfoort-013", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/13.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1120.0, "currency": "EUR" } } } },
+    { "sku": "B-014", "name": "Burst 14", "url_key": "burst-amersfoort-014", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/14.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1130.0, "currency": "EUR" } } } },
+    { "sku": "B-015", "name": "Burst 15", "url_key": "burst-amersfoort-015", "city": "Amersfoort", "small_image": { "url": "https://img.example.com/15.jpg" }, "price_range": { "minimum_price": { "final_price": { "value": 1140.0, "currency": "EUR" } } } }
+  ]
+}

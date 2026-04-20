@@ -1,0 +1,39 @@
+name: validation
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Run validation suite
+        env:
+          TELEGRAM_BOT_TOKEN: ci-test-harness-token
+          LOG_LEVEL: DEBUG
+          ALERT_PACING_SECONDS: "0"
+        run: pytest tests/ -v --tb=short
+
+      - name: Archive pytest report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-report
+          path: |
+            validation/reports/
+          if-no-files-found: ignore
