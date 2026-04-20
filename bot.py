@@ -71,13 +71,16 @@ from pathlib import Path
 from typing import Any
 
 import requests
+from curl_cffi import requests as cf_requests
 
 # ─────────────────────────── Config ────────────────────────────
 BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 
 STATE_FILE = Path(os.environ.get("STATE_FILE", "state.json"))
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}"
-H2S_GRAPHQL = "https://www.holland2stay.com/graphql"
+H2S_GRAPHQL = os.environ.get(
+    "H2S_GRAPHQL", "https://api.holland2stay.com/graphql"
+)
 
 ALLOWED_CITIES = [
     "Amersfoort", "Arnhem", "Deventer", "Enschede",
@@ -105,23 +108,12 @@ LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO").upper()
 STATE_SCHEMA_VERSION = 2
 
 HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-    ),
     "Accept": "application/json, text/plain, */*",
     "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
     "Content-Type": "application/json",
     "Origin": "https://www.holland2stay.com",
     "Referer": "https://www.holland2stay.com/residences",
-    "Sec-Ch-Ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
-    "Sec-Ch-Ua-Mobile": "?0",
-    "Sec-Ch-Ua-Platform": "\"Windows\"",
-    "Sec-Fetch-Dest": "empty",
-    "Sec-Fetch-Mode": "cors",
-    "Sec-Fetch-Site": "same-origin",
-    "Store": "nl_en",
+    "Store": os.environ.get("H2S_STORE", "default"),
 }
 
 logging.basicConfig(
@@ -138,7 +130,8 @@ if not BOT_TOKEN:
 tg_session = requests.Session()
 tg_session.headers.update({"Accept": "application/json"})
 
-h2s_session = requests.Session()
+H2S_IMPERSONATE = os.environ.get("H2S_IMPERSONATE", "chrome")
+h2s_session = cf_requests.Session(impersonate=H2S_IMPERSONATE)
 h2s_session.headers.update(HEADERS)
 
 
@@ -1288,10 +1281,12 @@ def telegram_loop(state: State, stop: threading.Event) -> None:
 
 
 # ───────────────── Holland2Stay GraphQL polling ────────────────
-# Rich query: today's fields + media + description + optional custom attrs
-# (bedrooms / living_area / available_from). If the H2S schema rejects any
-# of these, we permanently degrade to GRAPHQL_QUERY for the rest of the
-# process lifetime — captions then omit the corresponding rows.
+# Rich query: every field below has been confirmed against the live
+# api.holland2stay.com/graphql schema. `bedrooms` and `available_from`
+# were removed after the 2026-04 schema refresh rejected them with
+# 500 responses; if you want them back, probe first. `living_area` is
+# kept because the listing_available_from() / listing_bedrooms() helpers
+# already fall back to other keys or return None safely.
 RICH_QUERY = """
 query GetAvailable($pageSize: Int!) {
   products(
@@ -1304,9 +1299,7 @@ query GetAvailable($pageSize: Int!) {
       name
       url_key
       city
-      bedrooms
       living_area
-      available_from
       short_description { html }
       small_image { url label }
       thumbnail { url label }
@@ -1361,7 +1354,8 @@ def _post_graphql(query: str, variables: dict | None = None) -> dict | None:
         payload["variables"] = variables
     try:
         r = h2s_session.post(H2S_GRAPHQL, json=payload, timeout=30)
-    except requests.RequestException as e:
+    except (requests.RequestException,
+            cf_requests.exceptions.RequestException) as e:
         log.warning("h2s network error: %s", e)
         return None
 
