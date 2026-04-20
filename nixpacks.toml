@@ -1,0 +1,12 @@
+# Force Nixpacks to use Python 3.11 (matches local dev + test environment).
+# Without this pin, Nixpacks may select a newer Python that has not been
+# validated against the pytest suite.
+
+[phases.setup]
+nixPkgs = ["python311", "gcc"]
+
+[phases.install]
+cmds = ["python3.11 -m venv /opt/venv", "/opt/venv/bin/pip install --upgrade pip", "/opt/venv/bin/pip install -r requirements.txt"]
+
+[start]
+cmd = "/opt/venv/bin/python -u bot.py"
